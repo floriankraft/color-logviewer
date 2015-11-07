@@ -1,6 +1,6 @@
 {
   "name": "color-logviewer",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "Streams log files colored line by line in a 'tail -F' like way.",
   "main": "./lib/main.js",
   "bin": {
