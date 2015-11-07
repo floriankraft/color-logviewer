@@ -1,0 +1,22 @@
+{
+  "name": "color-logviewer",
+  "version": "0.1.0",
+  "description": "Streams log files colored line by line in a 'tail -F' like way.",
+  "main": "./lib/main.js",
+  "bin": {
+    "color-logviewer": "./lib/main.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "color",
+    "logviewer"
+  ],
+  "author": "Florian Kraft <mail@floriankraft.com>",
+  "license": "ISC",
+  "dependencies": {
+    "tail": "^0.4.0"
+  },
+  "preferGlobal": "true"
+}
