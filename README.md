@@ -1,3 +1,7 @@
 # color-logviewer
 
-Usage: `node color-logviewer logfile.log`
+Prints out the tail of a logfile with lines colored depending on the severity level.
+
+## Usage
+
+`color-logviewer logfile.log`

@@ -6,6 +6,13 @@
   "bin": {
     "color-logviewer": "./lib/main.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/floriankraft/color-logviewer"
+  },
+  "bugs": {
+    "url": "https://github.com/floriankraft/color-logviewer/issues"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -14,9 +21,9 @@
     "logviewer"
   ],
   "author": "Florian Kraft <mail@floriankraft.com>",
-  "license": "ISC",
   "dependencies": {
     "tail": "^0.4.0"
   },
-  "preferGlobal": "true"
+  "preferGlobal": "true",
+  "license": "MIT"
 }

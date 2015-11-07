@@ -20,7 +20,7 @@
     "notypeof"      : false,
     "shadow"        : false,
     "singleGroups"  : false,
-    "strict"        : true,
+    "strict"        : false,
     "undef"         : true,
     "unused"        : true,
 
