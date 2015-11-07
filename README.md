@@ -32,7 +32,7 @@ https://www.npmjs.com/package/colors#text-colors.
 
 An example call with a custom color map could look like the following:
 
-`color-logviewer -c ERROR=cyan,WARN=magenta,DEBUG=gray,TRACE=green /c/Entwicklung/CQ54/author/crx-quickstart/logs/error.log`
+`color-logviewer -c ERROR=cyan,WARN=magenta,DEBUG=gray,TRACE=green logfile.log`
 
 ## Inspiration
 
