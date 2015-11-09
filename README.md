@@ -2,7 +2,10 @@
 
 ## Summary
 
-Prints out the tail of a logfile with lines colored depending on the severity level.
+Prints out the tail of a logfile with lines colored depending on the keywords you defined.
+
+* npm: https://www.npmjs.com/package/color-logviewer
+* GitHub: https://github.com/floriankraft/color-logviewer
 
 ## Installation
 
@@ -10,11 +13,11 @@ Prints out the tail of a logfile with lines colored depending on the severity le
 
 ## Usage
 
-The following command will display the log output with the default color map:
+The following command will display the last 10 lines of `logfile.log` and start listening for new incoming lines:
 
 `color-logviewer logfile.log`
 
-The default color map is defined as follows:
+All lines will be highlighted according to the default color map, which is defined as follows:
 
 | Keyword | Color   |
 | ------- | ------- |
@@ -23,16 +26,25 @@ The default color map is defined as follows:
 | DEBUG   | green   |
 | TRACE   | blue    |
 
-The order of the keywords in the color map determines, which color will be chosen to color the whole line. For example,
-as the keyword _WARN_ comes before _INFO_, _DEBUG_ and _TRACE_, the _WARN_ keyword and its coloring gets precedence.
+The order of the keywords in the color map determines, which color will be chosen to color a line. For example, as the
+keyword _WARN_ comes before _INFO_, _DEBUG_ and _TRACE_, the _WARN_ keyword and its coloring gets precedence.
 
-Alternatively you can define your own color map. Call `color-logviewer` with the `-c` switch and define key-value pairs,
-where the key is the word that must occur on a line the value is a color as defined in
-[https://www.npmjs.com/package/colors#text-colors](https://www.npmjs.com/package/colors#text-colors).
+## Options
 
-An example call with a custom color map could look like the following:
+* `-n <number-of-lines>` By calling the command with the `-n` switch and a number, you can define how many lines will
+be displayed initially. (Default: 10)
+* `-c <color-map>` You can define your own color map by using the `-c` switch. `<color-map>` is a String containing
+key-value pairs, where the key is the word that must occur on a line and the value is a color as defined in
+[https://www.npmjs.com/package/colors#text-colors](https://www.npmjs.com/package/colors#text-colors). (Default: See table
+above.)
 
-`color-logviewer -c ERROR=cyan,WARN=magenta,DEBUG=gray,TRACE=green logfile.log`
+A most complete call with all possible parameters could look like the following:
+
+`color-logviewer -n 15 -c foo=magenta,bar=cyan logfile.log`
+
+This will display the last 15 lines of _logfile.log_, color every line in magenta where the String "foo" occurs and
+every line where the String "bar" occurs in cyan. And of course it will listen for new lines to arrive and color them as
+well.
 
 ## Inspiration
 
@@ -40,17 +52,21 @@ Depending on your use cases you could create aliases in your .bashrc file to hig
 interested in. For example:
 
 ```bash
-# shorthand
-alias clog="color-logviewer"
+# shorthand command, returns last 20 lines before streaming starts
+alias clog="color-logviewer -n 20"
 
-# highlight errors only
-alias clog-error="color-logviewer -c ERROR=red"
-# highlight errors and warnings only
-alias clog-warn="color-logviewer -c ERROR=red,WARN=yellow"
+# highlight only lines in which the String "ERROR" occurs
+alias clog-error="clog -c ERROR=red"
+
+# highlight only lines in which the String "ERROR" or "WARN" occurs (ERROR has precedence as it comes first)
+alias clog-warn="clog -c ERROR=red,WARN=yellow"
 ```
 
 ## Todo
 
 * [ ] More reliable error handling
-* [ ] Before listening for new lines, display the last n lines of the logfile
+* [x] Before listening for new lines, display the last n lines of the logfile
 * [ ] Enter key should insert blank lines, for a more "tail"-like experience
+* [ ] Create a nice image of the program in action and show it here
+* [ ] Make line endings configurable
+* [ ] Handling of `-n 0`
