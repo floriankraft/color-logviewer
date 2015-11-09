@@ -28,7 +28,7 @@ as the keyword _WARN_ comes before _INFO_, _DEBUG_ and _TRACE_, the _WARN_ keywo
 
 Alternatively you can define your own color map. Call `color-logviewer` with the `-c` switch and define key-value pairs,
 where the key is the word that must occur on a line the value is a color as defined in
-https://www.npmjs.com/package/colors#text-colors.
+[https://www.npmjs.com/package/colors#text-colors](https://www.npmjs.com/package/colors#text-colors).
 
 An example call with a custom color map could look like the following:
 
@@ -36,7 +36,7 @@ An example call with a custom color map could look like the following:
 
 ## Inspiration
 
-Depending on your use cases you could create an alias in your .bashrc file to highlight only severity levels you are
+Depending on your use cases you could create aliases in your .bashrc file to highlight only severity levels you are
 interested in. For example:
 
 ```bash
@@ -48,3 +48,9 @@ alias clog-error="color-logviewer -c ERROR=red"
 # highlight errors and warnings only
 alias clog-warn="color-logviewer -c ERROR=red,WARN=yellow"
 ```
+
+## Todo
+
+* [ ] More reliable error handling
+* [ ] Before listening for new lines, display the last n lines of the logfile
+* [ ] Enter key should insert blank lines, for a more "tail"-like experience
