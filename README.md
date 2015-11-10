@@ -1,11 +1,11 @@
 # color-logviewer
 
-## Summary
-
 Prints out the tail of a logfile with lines colored depending on the keywords you defined.
 
 * npm: [https://www.npmjs.com/package/color-logviewer](https://www.npmjs.com/package/color-logviewer)
 * GitHub: [https://github.com/floriankraft/color-logviewer](https://github.com/floriankraft/color-logviewer)
+
+![color-logviewer in action](https://raw.githubusercontent.com/floriankraft/color-logviewer/master/color-logviewer.png)
 
 ## Installation
 
@@ -68,9 +68,9 @@ alias clog-warn="clog -c ERROR=red,WARN=yellow"
 
 ## Todo
 
-* [ ] More reliable error handling
-* [x] Before listening for new lines, display the last n lines of the logfile
 * [ ] Enter key should insert blank lines, for a more "tail"-like experience
-* [ ] Create a nice image of the program in action and show it here
 * [ ] Make line endings configurable
-* [ ] Handling of `-n 0`
+* [x] Create a nice image of the program in action and show it here
+* [x] More reliable error handling
+* [x] Handling of `-n 0`
+* [x] Before listening for new lines, display the last n lines of the logfile
