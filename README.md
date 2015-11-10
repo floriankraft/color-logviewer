@@ -4,12 +4,16 @@
 
 Prints out the tail of a logfile with lines colored depending on the keywords you defined.
 
-* npm: https://www.npmjs.com/package/color-logviewer
-* GitHub: https://github.com/floriankraft/color-logviewer
+* npm: [https://www.npmjs.com/package/color-logviewer](https://www.npmjs.com/package/color-logviewer)
+* GitHub: [https://github.com/floriankraft/color-logviewer](https://github.com/floriankraft/color-logviewer)
 
 ## Installation
 
 `npm install -g color-logviewer`
+
+## Synopsis
+
+`color-logviewer [-n number_of_lines] [-c keyword=color[,keyword=color...]] filename`
 
 ## Usage
 
