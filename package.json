@@ -25,6 +25,7 @@
   "author": "Florian Kraft <mail@floriankraft.com>",
   "dependencies": {
     "colors": "^1.1.2",
+    "keypress": "^0.2.1",
     "tail": "^0.4.0"
   },
   "preferGlobal": "true",

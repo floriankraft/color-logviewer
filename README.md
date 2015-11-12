@@ -62,14 +62,19 @@ alias clog="color-logviewer -n 20"
 # highlight only lines in which the String "ERROR" occurs
 alias clog-error="clog -c ERROR=red"
 
-# highlight only lines in which the String "ERROR" or "WARN" occurs (ERROR has precedence as it comes first)
+# highlight only lines in which the String "ERROR" or "WARN" occurs
+# (ERROR has precedence as it comes first)
 alias clog-warn="clog -c ERROR=red,WARN=yellow"
 ```
 
 ## Todo
 
-* [ ] Enter key should insert blank lines, for a more "tail"-like experience
+* [ ] Solve encoding issues
+* [ ] Provide regex pattern instead of simple search for String
+* [ ] Add Changelog to readme
 * [ ] Make line endings configurable
+* [x] Enter key should insert blank lines, for a more "tail"-like experience
+* [x] Cross-OS end-of-line characters
 * [x] Create a nice image of the program in action and show it here
 * [x] More reliable error handling
 * [x] Handling of `-n 0`
