@@ -67,12 +67,41 @@ alias clog-error="clog -c ERROR=red"
 alias clog-warn="clog -c ERROR=red,WARN=yellow"
 ```
 
-## Todo
+## History
+
+### Changelog
+
+#### Version 0.4.0 (2015-11-12)
+* Now you can insert blank lines by pressing the return key.
+* The EOL character is now selected depending on the OS.
+
+#### Version 0.3.1 (2015-11-10)
+Better error handling
+
+#### Version 0.3.0 (2015-11-10)
+Display the last n lines before streaming new lines
+
+#### Version 0.2.2 (2015-11-09)
+Better error handling
+
+#### Version 0.2.1 (2015-11-07)
+Fixed typo in readme
+
+#### Version 0.2.0 (2015-11-07)
+Support of custom color maps
+
+#### Version 0.1.1 (2015-11-07)
+MIT license
+
+#### Version 0.1.0 (2015-11-07)
+Initial working version
+
+### Todos
 
 * [ ] Solve encoding issues
 * [ ] Provide regex pattern instead of simple search for String
-* [ ] Add Changelog to readme
 * [ ] Make line endings configurable
+* [x] Add Changelog to readme
 * [x] Enter key should insert blank lines, for a more "tail"-like experience
 * [x] Cross-OS end-of-line characters
 * [x] Create a nice image of the program in action and show it here
