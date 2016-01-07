@@ -71,6 +71,9 @@ alias clog-warn="clog -c ERROR=red,WARN=yellow"
 
 ### Changelog
 
+#### Version 0.4.1 (2016-01-07)
+* Fixed: Program does not work on some Linux installations.
+
 #### Version 0.4.0 (2015-11-12)
 * Now you can insert blank lines by pressing the return key.
 * The EOL character is now selected depending on the OS.
