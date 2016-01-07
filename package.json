@@ -4,7 +4,7 @@
   "description": "Streams log files in a 'tail -F' like way and colors them.",
   "main": "./lib/main.js",
   "bin": {
-    "color-logviewer": "./lib/main.js"
+    "color-logviewer": "./bin/color-logviewer"
   },
   "repository": {
     "type": "git",
