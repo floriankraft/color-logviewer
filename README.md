@@ -71,6 +71,9 @@ alias clog-warn="clog -c ERROR=red,WARN=yellow"
 
 ### Changelog
 
+#### Version 0.5.0 (2016-01-10)
+* Now supports simultaneous view of multiple logfiles via wildcard character (`*`).
+
 #### Version 0.4.1 (2016-01-07)
 * Fixed: Program does not work on some Linux installations.
 
