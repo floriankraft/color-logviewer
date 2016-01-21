@@ -13,7 +13,7 @@ Prints out the tail of a logfile with lines colored depending on the keywords yo
 
 ## Synopsis
 
-`color-logviewer [-n number_of_lines] [-c keyword=color[,keyword=color...]] filename`
+`color-logviewer [-n number_of_lines] [-c keyword=color[,keyword=color...]] -s filename`
 
 ## Usage
 
@@ -39,18 +39,18 @@ keyword _WARN_ comes before _INFO_, _DEBUG_ and _TRACE_, the _WARN_ keyword and 
 be displayed initially. (Default: 10)
 * `-c <color-map>` You can define your own color map by using the `-c` switch. `<color-map>` is a String containing
 key-value pairs, where the key is the word that must occur on a line and the value is a color as defined in
-[https://www.npmjs.com/package/colors#text-colors](https://www.npmjs.com/package/colors#text-colors). (Default: See table
-above.)
+[https://www.npmjs.com/package/colors#text-colors](https://www.npmjs.com/package/colors#text-colors). (Default: See
+table above.)
+* `-s` If you want to colorize only the word itself and not the whole line, just call the function with the -s switch.
 
-A most complete call with all possible parameters could look like the following:
+An example call with some parameters could look like the following:
 
 `color-logviewer -n 15 -c foo=magenta,bar=cyan logfile.log`
 
 This will display the last 15 lines of _logfile.log_, color every line in magenta where the String "foo" occurs and
-every line where the String "bar" occurs in cyan. And of course it will listen for new lines to arrive and color them as
-well.
+every line where the String "bar" occurs in cyan. And of course it will listen for new lines and color them as well.
 
-## Inspiration
+## Usage inspiration
 
 Depending on your use cases you could create aliases in your .bashrc file to highlight only severity levels you are
 interested in. For example:
@@ -70,6 +70,10 @@ alias clog-warn="clog -c ERROR=red,WARN=yellow"
 ## History
 
 ### Changelog
+
+#### Version 1.0.0 (2016-01-21)
+* You can now colorize words only instead of the whole line by using the -s switch.
+* As this version seems to be stable enough, I decided to go up to the first major version.
 
 #### Version 0.5.0 (2016-01-10)
 * Now supports simultaneous view of multiple logfiles via wildcard character (`*`).
@@ -104,9 +108,10 @@ Initial working version
 
 ### Todos
 
-* [ ] Solve encoding issues
+* [ ] Provide help function (-h)
 * [ ] Provide regex pattern instead of simple search for String
 * [ ] Make line endings configurable
+* [ ] Solve encoding issues
 * [x] Add Changelog to readme
 * [x] Enter key should insert blank lines, for a more "tail"-like experience
 * [x] Cross-OS end-of-line characters
